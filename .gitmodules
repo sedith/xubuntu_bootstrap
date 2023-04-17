@@ -1,0 +1,6 @@
+[submodule "config_files/pulsar/packages/0-env"]
+	path = config_files/pulsar/packages/0-env
+	url = git@github.com:andystanton/0-env.git
+[submodule "config_files/pulsar/packages/one-dark-custom"]
+	path = config_files/pulsar/packages/one-dark-custom
+	url = https://github.com/Sedith/one-dark-custom.git
