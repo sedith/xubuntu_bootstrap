@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get upgrade -y
 sudo apt-get install -y curl wget vim
 
 # bashrc
@@ -20,9 +20,11 @@ sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://b
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
 sudo apt install -y brave-browser
+# TODO sync browser
 
 # thunderbird
 sudo apt-get install -y thunderbird
+# TODO export config and import it
 
 # redshift
 sudo apt-get install -y redshift
@@ -47,6 +49,7 @@ sudo apt-get install -y openvpn
 wget https://github.com/pulsar-edit/pulsar/releases/download/v1.103.0/Linux.pulsar_1.103.0_amd64.deb
 sudo dpkg -i Linux.pulsar_1.103.0_amd64.deb
 cp -r ./config_files/pulsar ~/.pulsar
+rm Linux.pulsar_1.103.0_amd64.deb
 
 # latex
 sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-bibtex-extra cm-super latexmk biber
@@ -64,7 +67,7 @@ cp -r ./config_files/config/xfce4/ ~/.config/xfce4
 # disable pad when typing using libinputs, remove synaptics
 echo 'add - Option "DisableWhileTyping" "True" - to libinput touchpad catchall in /usr/share/X11/xorg.conf.d/40-libinput.conf'
 sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf
-sudo apt remove xserver-xorg-input-synaptics*
+sudo apt remove -y xserver-xorg-input-synaptics*
 # TODO do it properly through commandlines
 
 # zotero
@@ -73,7 +76,12 @@ sudo apt remove xserver-xorg-input-synaptics*
 # matlab
 # TODO install + clouded bib?
 
-
 # install stuff
 sudo apt install -y blueman bluetooth
 sudo apt install -y kolourpaint
+
+# default apps
+cp ./config_files/config/mimeapps.list ~/.config/
+
+# reboot
+reboot
