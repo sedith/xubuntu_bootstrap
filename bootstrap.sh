@@ -33,7 +33,7 @@ cp ./config_files/config/autostart/redshift-gtk.desktop ~/.config/autostart/
 sudo apt-add-repository ppa:yktooo/ppa
 sudo apt-get update
 sudo apt-get install -y indicator-sound-switcher
-sudo cp ./config_files/etc/xdg/autostart/indicator-sound-switcher.desktop /etc/xdg/autostart/
+cp ./config_files/config/autostart/indicator-sound-switcher.desktop config/autostart/
 
 # quad9
 sudo cp ./config_files/etc/systemd/resolved.conf /etc/systemd/
@@ -56,6 +56,7 @@ sudo apt-get install -y ibus ibus-mozc
 sudo apt-get install -y xbindkeys
 cp ./config_files/xbindkeysrc ~/.xbindkeysrc
 xbindkeys_autostart
+# TODO export ibus keyboard layout config?
 
 # panels and configs
 cp -r ./config_files/config/xfce4/ ~/.config/xfce4
@@ -64,3 +65,6 @@ cp -r ./config_files/config/xfce4/ ~/.config/xfce4
 echo 'add - Option "DisableWhileTyping" "True" - to libinput touchpad catchall in /usr/share/X11/xorg.conf.d/40-libinput.conf'
 sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf
 sudo apt remove xserver-xorg-input-synaptics*
+
+# install stuff
+sudo apt install -y blueman bluetooth
