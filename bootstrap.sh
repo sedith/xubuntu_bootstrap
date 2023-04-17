@@ -65,6 +65,15 @@ cp -r ./config_files/config/xfce4/ ~/.config/xfce4
 echo 'add - Option "DisableWhileTyping" "True" - to libinput touchpad catchall in /usr/share/X11/xorg.conf.d/40-libinput.conf'
 sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf
 sudo apt remove xserver-xorg-input-synaptics*
+# TODO do it properly through commandlines
+
+# zotero
+# TODO install + clouded bib?
+
+# matlab
+# TODO install + clouded bib?
+
 
 # install stuff
 sudo apt install -y blueman bluetooth
+sudo apt install -y kolourpaint
