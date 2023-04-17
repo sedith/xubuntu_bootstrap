@@ -1,0 +1,10 @@
+'atom-text-editor':
+    'ctrl-alt-c'    : 'editor:toggle-line-comments'
+    'ctrl-r'        : 'bookmarks:toggle-bookmark'
+    'ctrl-shift-r'  : 'bookmarks:goto-next-bookmark'
+    'alt-p'         : 'spell-check:correct-misspelling'
+
+'atom-workspace':
+    'alt-shift-t'   : 'open-terminal-here:open'
+    'shift-alt-c'   : 'python-black:format'
+    'ctrl-alt-i'    : 'tool-bar:toggle'

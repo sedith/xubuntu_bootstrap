@@ -1,0 +1,66 @@
+'.source.cpp':
+    'cout':
+        'prefix': 'cout'
+        'body': 'std::cout << "$1" << std::endl;'
+'.text.tex.latex':
+    'todo':
+        'prefix': 'todo'
+        'body': '\\\\todo{$1}'
+    'minipage':
+        'prefix': 'minipage'
+        'body': '\\\\begin{minipage}{$1}\n\n\\\\end{minipage}'
+'.source.gfm':
+    'vocabulaire':
+        'prefix': 'vocab'
+        'body': '<!-- vocabulaire -->\n**漢字** | **仮名** | **フランス語**\n:-:|:-:|:---:\n$1 | $2 | $3'
+    'furigana':
+        'prefix': 'furi'
+        'body': '\\\\furi{$1}{$2}'
+    'dialogue':
+        'prefix': 'dialogue'
+        'body': '\\\\begin{dialogue}\n\\\\said{$1}{$2}{$3}\n\\\\end{dialogue}'
+    'said':
+        'prefix': 'said'
+        'body': '\\\\said{$1}{$2}{$3}'
+    'underline':
+        'prefix': 'underline'
+        'body': '\\\\ud{$1}'
+    'trad':
+        'prefix': 'trad'
+        'body': '\\\\trad{$1}'
+    'blue':
+        'prefix': 'blue'
+        'body': '\\\\blue{$1}'
+    'purple':
+        'prefix': 'purple'
+        'body': '\\\\purple{$1}'
+    'orange':
+        'prefix': 'orange'
+        'body': '\\\\orange{$1}'
+    'pathfinder1A':
+        'prefix': 'pf1A'
+        'body': '![](/misc/action.png)'
+    'pathfinder2A':
+        'prefix': 'pf2A'
+        'body': '![](/misc/two_action.png)'
+    'pathfinder3A':
+        'prefix': 'pf3A'
+        'body': '![](/misc/three_action.png)'
+    'pathfinderR':
+        'prefix': 'pfR'
+        'body': '![](/misc/reaction.png)'
+    'pathfinderFA':
+        'prefix': 'pfFA'
+        'body': '![](/misc/free_action.png)'
+    'pathfinderRoll':
+        'prefix': 'pfRoll'
+        'body': '![](/misc/dice.png)'
+    'pathfinderReward':
+        'prefix': 'pfReward'
+        'body': '![](/misc/reward.png)'
+    'pathfinderFight':
+        'prefix': 'pfFight'
+        'body': '![](/misc/fight.png)'
+    'pathfinderHazard':
+        'prefix': 'pfHazard'
+        'body': '![](/misc/hazard.png)'

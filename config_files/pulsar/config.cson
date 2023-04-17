@@ -1,0 +1,342 @@
+"*":
+  MaPerWiki:
+    Autosave:
+      autosaveOn: false
+    LinkChecker:
+      autocheckOn: false
+    TOC:
+      tocOn: false
+      tocPanelPosition: "right"
+  "atom-latex":
+    build_after_save: false
+    clean_after_build: true
+    custom_toolchain: "%TEX %ARG %DOC.%EXT"
+    delayed_minimap_refresh: true
+    file_ext_to_clean: "*-blx.bib, *.aux, *.bbl, *.blg, *.idx, *.ind, *.lof, *.lot, *.out, *.toc, *.acn, *.acr, *.alg, *.glg, *.glo, *.gls, *.ist, *.fls, *.log, *.fdb_latexmk, *.gz, *.nav, *.snm, *-blx.bib, *.run.xml, *.mtc*, *.maf, *.brf, *.loa, *.xdy, *.thm, *.ntn, *.bcf, *glsdefs, *.lom"
+    hide_log_if_success: true
+    save_on_build: true
+    toolchain: "latexmk toolchain"
+  "autocomplete-python":
+    useKite: false
+  core:
+    closeDeletedFileTabs: true
+    customFileTypes:
+      "text.xml": [
+        "opf"
+        "world"
+      ]
+    disabledPackages: [
+      "styleguide"
+      "vim-mode-plus"
+      "markdown-preview"
+      "language-msg"
+      "wrap-guide"
+      "language-autotools"
+      "open-on-github"
+      "welcome"
+      "metrics"
+      "python-tools"
+      "grammar-check"
+    ]
+    packagesWithKeymapsDisabled: [
+      "python-black"
+      "github"
+      "tree-view"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "one-dark-custom"
+    ]
+  editor:
+    fontFamily: "DejaVu Sans Mono"
+    fontSize: 13
+    softWrap: true
+    tabLength: 4
+  "env-from-shell":
+    variables: [
+      "BIBINPUTS"
+    ]
+  "exception-reporting":
+    userId: "8aa7624a-6461-4d41-98c3-d62e31259416"
+  "file-types":
+    "*.opt": "text.xml"
+  fonts:
+    fontFamily: "DejaVu Sans Mono - Bront"
+  "grammar-check":
+    language: "en"
+  "latex-autocomplete": {}
+  "markdown-preview-enhanced":
+    latexEngine: "xelatex"
+    openPreviewPaneAutomatically: false
+    previewTheme: "github-dark.css"
+  "markdown-preview-plus":
+    importPackageStyles: [
+      "*"
+    ]
+    markdownItConfig:
+      breakOnSingleNewline: true
+      useCheckBoxes: false
+      useEmoji: false
+      useLazyHeaders: false
+      useToc: true
+    mathConfig:
+      numberEquations: true
+    previewConfig: {}
+    useGitHubStyle: true
+  minimap:
+    adjustAbsoluteModeHeight: true
+    displayMinimapOnLeft: true
+    minimapScrollIndicator: false
+    plugins:
+      bookmarks: true
+      bookmarksDecorationsZIndex: 0
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+  "project-viewer":
+    disclaimer:
+      v140: false
+  "python-black":
+    fmtOnSave: false
+    lineLength: 120
+    skipStringNormalization: true
+  "python-tools":
+    pythonPath: "/usr/bin/"
+  "spell-check":
+    addKnownWords: true
+    excludedScopes: [
+      ".keyword"
+      ".support"
+      ".support"
+      ".storage"
+      ".variable"
+      ".comment"
+    ]
+    grammars: [
+      "text.tex.latex"
+      "text.tex.latex.beamer"
+      "text.plain"
+    ]
+    knownWords: [
+      "todo"
+      "todos"
+      "multi"
+      "NMPC"
+      "beamer"
+      "MBZIRC"
+      "GenoM"
+      "quadrotor"
+      "hexarotor"
+      "quadrotors"
+      "hexarotors"
+      "UAV"
+      "UAVs"
+      "RGB"
+      "png"
+      "jpeg"
+      "quaternion"
+      "quaternions"
+      "subequations"
+      "subfigure"
+      "covid"
+      "barycenter"
+      "offboard"
+      "covariance"
+      "jacobian"
+      "collinear"
+      "servoing"
+      "MPC"
+      "fiducial"
+      "translational"
+      "underactuated"
+      "coplanar"
+      "reprojection"
+      "effector"
+      "multirotors"
+      "multirotor"
+      "Kalman"
+      "genericity"
+      "GTMR"
+      "lidars"
+      "priori"
+      "subscripted"
+      "covariances"
+      "decorrelated"
+      "odometry"
+      "observability"
+      "Runge-Kutta"
+      "downfacing"
+      "IMU"
+      "NMPCs"
+      "RealSense"
+      "NUC"
+      "FoV"
+      "AruCo"
+      "nmpc"
+      "openrobots"
+      "redmine.laas"
+      "middleware"
+      "ROS"
+      "th"
+      "scalable"
+      "AIA"
+      "nonlinearity"
+      "precomputing"
+      "sigmoid"
+      "annulus"
+      "DoF"
+      "DoFs"
+      "amongst"
+      "modularity"
+      "MRAVs"
+      "HRI"
+      "Runge-Kutta"
+      "VIO"
+      "waypoints"
+      "pre"
+      "linearized"
+      "Jacobians"
+      "differentiable"
+      "topscript"
+      "tunable"
+      "grayscale"
+      "instantiation"
+      "workspaces"
+      "reactively"
+      "amidst"
+      "scalability"
+      "Riccati"
+      "maximimization"
+      "discretized"
+      "optimality"
+      "underactuation"
+      "waypoint"
+      "brushless"
+      "dissipative"
+      "complexifies"
+      "implementability"
+      "replanning"
+      "perceivability"
+      "exteroceptive"
+      "fisheye"
+      "undistorted"
+      "lidar"
+      "cofactors"
+      "vectorial"
+      "datasheet"
+      "nonlinearities"
+      "intrication"
+      "implementative"
+      "parameterization"
+      "rototranslations"
+      "reframed"
+      "unmodeled"
+      "tentatives"
+      "discretization"
+      "rotorcrafts"
+      "aircrafts"
+      "prototyped"
+      "forecasted"
+      "unpredicted"
+      "collinearity"
+      "reconfigurable"
+      "textwidth"
+      "overcomed"
+      "gimbal"
+      "homeomorphic"
+      "piecewise"
+      "robustify"
+      "computable"
+      "extremum"
+      "frontoparallel"
+      "detections"
+      "linearize"
+      "transposable"
+      "accelerometer"
+      "linearizable"
+      "integrable"
+      "formalizations"
+      "formalisms"
+      "compliancy"
+      "proprioceptive"
+      "Colorimetric"
+      "centroid"
+      "thresholding"
+      "occulting"
+      "colorimetric"
+      "iteratively"
+      "rototranslated"
+      "sensorimotor"
+      "wifi"
+      "linearization"
+      "octorotors"
+      "unidirectionally"
+      "omni"
+      "directionally"
+      "heptarotor"
+      "directionality"
+      "coplanarity"
+      "imprecisions"
+      "boundedness"
+      "tiltable"
+      "infimum"
+      "Lyapunov"
+      "suboptimal"
+      "feedforward"
+      "positivity"
+      "reframes"
+      "discretize"
+      "nullspace"
+      "rasterization"
+      "Pocolibs"
+      "Genomix"
+      "Matlab"
+      "TCL"
+      "PeerTube"
+      "linearizations"
+      "nullspaces"
+      "rototranslation"
+      "pseudometric"
+      "Simulink"
+      "sigmoids"
+      "asymptotes"
+      "benchmarking"
+      "precomputed"
+      "precomputed"
+      "kinodynamic"
+      "equalities"
+      "bijective"
+      "tiltings"
+      "Uncrewed"
+    ]
+    localePaths: [
+      "/usr/share/hunspell"
+    ]
+    locales: [
+      "en-US"
+    ]
+  "terminal-plus":
+    core:
+      autoRunCommand: "source ~/.bashrc"
+      workingDirectory: "Active File"
+    style:
+      fontFamily: "DejaVu Sans Mono"
+  "terminal-tab": {}
+  "tool-bar":
+    visible: false
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  "vim-mode-plus":
+    keymapSToSelect: true
+    keymapYToYankToLastCharacterOfLine: true
+    startInInsertMode: true
+  welcome:
+    showOnStartup: false
+".log.source":
+  editor:
+    softWrap: false
+".source.ssh-config":
+  editor:
+    showInvisibles: false

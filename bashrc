@@ -1,0 +1,116 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+
+## BASH HISTORY
+HISTCONTROL=ignoreboth:erasedups  # don't put duplicate lines or lines starting with space in the history.
+shopt -s histappend  # append to the history file, don't overwrite it
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary, update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# If set, the pattern "**" used in a pathname expansion context will match all files and zero or more directories and subdirectories.
+# shopt -s globstar
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# colored GCC warnings and errors
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# add an "alert" alias for long running commands, use: $ sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
+## EDITOR
+export EDITOR='pulsar'
+
+## PROMPT
+export PS1='\[\033[32m\][\t]\h:\W\$\[\033[00m\] '  # [hh:mm:ss]HOSTNAME:FOLDER$
+# export PS1='\[\033[32m\][\t]\u:\W\$\[\033[00m\] '  # [hh:mm:ss]USER:FOLDER$
+export PS2='> '
+
+## PATH
+export PATH=.:$PATH  # current folder first
+export PATH=$PATH:/opt/Zotero_linux-x86_64
+export PATH=$PATH:/home/$USER/.local/bin  # local python bin
+
+## LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/lib
+
+## LATEX
+export BIBINPUTS=.:/home/$USER/work/bib/
+
+## MATLAB
+export PATH=$PATH:/opt/matlab/bin
+alias matlabterm='matlab -nojvm -nodesktop'
+
+## ROBOTPKG
+export ROBOTPKG_BASE=/home/$USER/work/openrobots
+alias editrobotpkg='$EDITOR $ROBOTPKG_BASE/etc/robotpkg.conf'
+
+export PATH=$ROBOTPKG_BASE/bin:$ROBOTPKG_BASE/sbin:$PATH
+export PKG_CONFIG_PATH=$ROBOTPKG_BASE/lib/pkgconfig:$PKG_CONFIG_PATH
+export ROS_PACKAGE_PATH=$ROBOTPKG_BASE/share:$ROS_PACKAGE_PATH
+export PYTHONPATH=$ROBOTPKG_BASE/lib/python3.8/site-packages:$PYTHONPATH
+export LD_LIBRARY_PATH=$ROBOTPKG_BASE/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$ROBOTPKG_BASE/lib/genom/pocolibs/plugins:$LD_LIBRARY_PATH
+export TCLLIBPATH=$ROBOTPKG_BASE/lib/tcl-genomix
+
+## GENOM DEVEL
+export POSTER_PATH=lerema-wifi:neophasia-wifi  # POSTER PATH FOR DRONES
+export GENOM_DEVEL=/home/$USER/work/genom_devel
+
+export PATH=$GENOM_DEVEL/bin:$PATH
+export PKG_CONFIG_PATH=$GENOM_DEVEL/lib/pkgconfig:$PKG_CONFIG_PATH
+export ROS_PACKAGE_PATH=$GENOM_DEVEL/share:$ROS_PACKAGE_PATH
+export PYTHONPATH=$GENOM_DEVEL/lib/python3.8/site-packages:$PYTHONPATH
+export LD_LIBRARY_PATH=$GENOM_DEVEL/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$GENOM_DEVEL/lib/genom/pocolibs/plugins:$LD_LIBRARY_PATH
+
+alias genomconfig='../configure --prefix=$GENOM_DEVEL --with-templates=pocolibs/client/c,pocolibs/server CFLAGS="-O3 -Wall" CXXFLAGS="-O3 -Wall"'
+alias genomconfigros='../configure --prefix=$GENOM_DEVEL --with-templates=ros/client/ros,ros/client/c,ros/server CFLAGS="-Wall" CXXFLAGS="-Wall"'
+alias genomconfigmpc='../configure --prefix=$GENOM_DEVEL --with-templates=pocolibs/client/c,pocolibs/server CXXFLAGS="-O3 -Wall" CPPFLAGS="-O3 -Wall -march=native -mfpmath=sse -I$ROBOTPKG_BASE/include" LDFLAGS="-L$ROBOTPKG_BASE/lib -Wl,-R$ROBOTPKG_BASE/lib"'
+
+## GAZEBO CLASSIC
+export GAZEBO_PLUGIN_PATH=$ROBOTPKG_BASE/lib/gazebo/:$GAZEBO_PLUGIN_PATH
+export GAZEBO_PLUGIN_PATH=$GENOM_DEVEL/lib/gazebo/:$GAZEBO_PLUGIN_PATH
+export GAZEBO_MODEL_PATH=/home/$USER//work/genom_ws/gazebo_models//:$GAZEBO_MODEL_PATH
+
+## ROS BASE
+export ROS_BASE="/home/sedith/work/ros_base/devel/"
+alias rossource="source $ROS_BASE/setup.bash"
+alias rosdevel="source ./devel/setup.bash --extend"
+
+## ALIASES & COMMANDS
+alias please='sudo'
+alias open='thunar'
+alias isthere='ps -e | grep'
+alias py='python3'
+alias editbash='$EDITOR ~/.bashrc'
+alias githubconfig='git config user.name Sedith && git config user.email martin.jacquet@posteo.net'
+# alias black='black -S -l 150'
+alias pandocjaponais='pandoc --pdf-engine=xelatex *.md -o 00_main.pdf'
+alias cleanlatexshit='rm *.log *.aux *.nav *.out *.pdf *.run.xml *.snm *.toc *.synctex.gz *-blx.bib *.bbl *.blg'
+mkcdir () {
+    mkdir -p -- "$1" &&
+    cd -P -- "$1"
+}

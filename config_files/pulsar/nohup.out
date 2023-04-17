@@ -1,0 +1,28 @@
+libva error: /usr/lib/x86_64-linux-gnu/dri/i965_drv_video.so init failed
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.F2UznQ'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(Use `exe --trace-warnings ...` to show where the warning was created)
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.3174ZT'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.8oRvQM'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.BwQf9a'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.1ay2nO'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+bash: cannot set terminal process group (1792): Inappropriate ioctl for device
+bash: no job control in this shell
+logout
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.eqOoJz'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.Jlx9B6'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.9WmKka'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.d2nChW'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.S7hBuf'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.j3ayx8'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.u2oeID'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.HefqCl'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.wrpSoM'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.qXcbF8'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.UXNmF0'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.obzbnV'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.E1mo0a'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.KIEtlF'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/opt/Pulsar/resources/app.asar.unpacked/node_modules/tree-sitter-bash/build/Release/tree_sitter_bash_binding.node'. This is deprecated, see https://github.com/electron/electron/issues/18397.
+(node:585267) Electron: Loading non-context-aware native module in renderer: '/tmp/.org.chromium.Chromium.B4mXA4'. This is deprecated, see https://github.com/electron/electron/issues/18397.

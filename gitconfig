@@ -1,0 +1,12 @@
+[user]
+	email = martin.jacquet@posteo.net
+	name = sedith
+[core]
+	editor = vim
+[alias]
+	co = checkout
+	tree = log --graph --pretty=oneline --abbrev-commit
+[http]
+	sslVerify = false
+[init]
+	defaultBranch = main
