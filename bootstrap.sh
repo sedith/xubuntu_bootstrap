@@ -2,7 +2,7 @@
 
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt-get install -y curl wget vim
+sudo apt-get install -y curl wget vim git
 
 # bashrc
 cp ./bashrc ~/.bashrc
@@ -32,7 +32,7 @@ cp ./config_files/config/redshift.conf ~/.config/
 cp ./config_files/config/autostart/redshift-gtk.desktop ~/.config/autostart/
 
 # sound switcher indicator
-sudo apt-add-repository ppa:yktooo/ppa
+sudo apt-add-repository -y ppa:yktooo/ppa
 sudo apt-get update
 sudo apt-get install -y indicator-sound-switcher
 cp ./config_files/config/autostart/indicator-sound-switcher.desktop config/autostart/
@@ -62,7 +62,8 @@ xbindkeys_autostart
 # TODO export ibus keyboard layout config?
 
 # panels and configs
-cp -r ./config_files/config/xfce4/ ~/.config/xfce4
+cp -r ./config_files/config/xfce4/panel/* ~/.config/xfce4/panel/
+cp -r ./config_files/config/xfce4/xfconf/xfce-perchannel-xml/ ~/.config/xfce4/xfconf/xfce-perchannel-xml/
 
 # disable pad when typing using libinputs, remove synaptics
 echo 'add - Option "DisableWhileTyping" "True" - to libinput touchpad catchall in /usr/share/X11/xorg.conf.d/40-libinput.conf'
@@ -76,12 +77,34 @@ sudo apt remove -y xserver-xorg-input-synaptics*
 # matlab
 # TODO install + clouded bib?
 
-# install stuff
-sudo apt install -y blueman bluetooth
-sudo apt install -y kolourpaint
+# signal desktop
+wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
+cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
+echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' |\
+  sudo tee /etc/apt/sources.list.d/signal-xenial.list
+sudo apt update
+sudo apt install -y signal-desktop
 
+# install stuff
+sudo apt-get install -y blueman bluetooth
+sudo apt-get install -y kolourpaint
+sudo apt-get install -y thunar-archive-plugin engrampa
+sudo apt-get install -y okular
+sudo apt-get install -y plocates
+sudo apt-get install -y xfce4-cpugraph-plugin
+sudo apt-get install -y sqlite3
 # default apps
 cp ./config_files/config/mimeapps.list ~/.config/
+sudo update-alternatives --set x-terminal-emulator /usr/bin/terminator
+
+# custom home
+rm -d ~/Documents
+rm -d ~/Public
+rm -d ~/Templates
+rm -d ~/Videos
+
+# wallpaper
+cp -r wallpapers/ ~/Pictures/
 
 # reboot
 reboot
