@@ -5,10 +5,10 @@ sudo apt-get upgrade -y
 sudo apt-get install -y curl wget vim git
 
 # bashrc
-cp ./bashrc ~/.bashrc
+cp ./config_files/bashrc ~/.bashrc
 
 # git config
-cp ./gitconfig ~/.gitconfig
+cp ./config_files/gitconfig ~/.gitconfig
 
 # terminator
 sudo apt-get install -y terminator
@@ -50,6 +50,7 @@ wget https://github.com/pulsar-edit/pulsar/releases/download/v1.103.0/Linux.puls
 sudo dpkg -i Linux.pulsar_1.103.0_amd64.deb
 cp -r ./config_files/pulsar ~/.pulsar
 rm Linux.pulsar_1.103.0_amd64.deb
+# TODO pulsar packages using submodules (how to set config?)
 
 # latex
 sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-bibtex-extra cm-super latexmk biber
@@ -93,6 +94,7 @@ sudo apt-get install -y okular
 sudo apt-get install -y plocates
 sudo apt-get install -y xfce4-cpugraph-plugin
 sudo apt-get install -y sqlite3
+
 # default apps
 cp ./config_files/config/mimeapps.list ~/.config/
 sudo update-alternatives --set x-terminal-emulator /usr/bin/terminator
