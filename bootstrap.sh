@@ -104,6 +104,7 @@ rm -d ~/Documents
 rm -d ~/Public
 rm -d ~/Templates
 rm -d ~/Videos
+echo "snap" > .hidden
 
 # wallpaper
 cp -r wallpapers/ ~/Pictures/
