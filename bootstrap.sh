@@ -27,7 +27,7 @@ sudo apt-get install -y thunderbird
 # TODO export config and import it
 
 # redshift
-sudo apt-get install -y redshift
+sudo apt-get install -y redshift redshift-gtk
 cp ./config_files/config/redshift.conf ~/.config/
 cp ./config_files/config/autostart/redshift-gtk.desktop ~/.config/autostart/
 
@@ -88,7 +88,7 @@ sudo apt install -y signal-desktop
 
 # install stuff
 sudo apt-get install -y blueman bluetooth
-sudo apt-get install -y kolourpaint
+sudo apt-get install -y kolourpaint gimp
 sudo apt-get install -y thunar-archive-plugin engrampa
 sudo apt-get install -y okular
 sudo apt-get install -y plocates
@@ -104,6 +104,7 @@ rm -d ~/Documents
 rm -d ~/Public
 rm -d ~/Templates
 rm -d ~/Videos
+rm -d ~/Music
 echo "snap" > .hidden
 
 # wallpaper
