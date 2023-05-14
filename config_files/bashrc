@@ -63,6 +63,11 @@ export BIBINPUTS=.:/home/$USER/work/bib/
 export PATH=$PATH:/opt/matlab/bin
 alias matlabterm='matlab -nojvm -nodesktop'
 
+## ACADOS
+export ACADOS_BASE=$HOME/work/acados
+export LD_LIBRARY_PATH=$ACADOS_BASE/lib:$LD_LIBRARY_PATH
+export ACADOS_SOURCE_DIR=$ACADOS_BASE  # used by some acados scripts
+
 ## ROBOTPKG
 export ROBOTPKG_BASE=/home/$USER/work/openrobots
 alias editrobotpkg='$EDITOR $ROBOTPKG_BASE/etc/robotpkg.conf'
@@ -96,7 +101,7 @@ export GAZEBO_PLUGIN_PATH=$GENOM_DEVEL/lib/gazebo/:$GAZEBO_PLUGIN_PATH
 export GAZEBO_MODEL_PATH=/home/$USER//work/genom_ws/gazebo_models//:$GAZEBO_MODEL_PATH
 
 ## ROS BASE
-export ROS_BASE="/home/sedith/work/ros_base/devel/"
+export ROS_BASE=/opt/ros/humble
 alias rossource="source $ROS_BASE/setup.bash"
 alias rosdevel="source ./devel/setup.bash --extend"
 
