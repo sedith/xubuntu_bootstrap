@@ -17,7 +17,7 @@ cp ./config_files/config/terminator/config ~/.config/terminator/
 
 # brave browser
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
 sudo apt install -y brave-browser
 # TODO sync browser
@@ -81,8 +81,7 @@ sudo apt remove -y xserver-xorg-input-synaptics*
 # signal desktop
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
 cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
-echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' |\
-  sudo tee /etc/apt/sources.list.d/signal-xenial.list
+echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' | sudo tee /etc/apt/sources.list.d/signal-xenial.list
 sudo apt update
 sudo apt install -y signal-desktop
 
@@ -94,6 +93,8 @@ sudo apt-get install -y okular
 sudo apt-get install -y plocates
 sudo apt-get install -y xfce4-cpugraph-plugin
 sudo apt-get install -y sqlite3
+sudo apt-get install -y gnome-disk-utility
+sudo apt-get install -y kazam recordmydesktop
 
 # default apps
 cp ./config_files/config/mimeapps.list ~/.config/

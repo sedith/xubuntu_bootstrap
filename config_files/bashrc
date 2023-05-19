@@ -98,7 +98,7 @@ alias genomconfigmpc='../configure --prefix=$GENOM_DEVEL --with-templates=pocoli
 ## GAZEBO CLASSIC
 export GAZEBO_PLUGIN_PATH=$ROBOTPKG_BASE/lib/gazebo/:$GAZEBO_PLUGIN_PATH
 export GAZEBO_PLUGIN_PATH=$GENOM_DEVEL/lib/gazebo/:$GAZEBO_PLUGIN_PATH
-export GAZEBO_MODEL_PATH=/home/$USER//work/genom_ws/gazebo_models//:$GAZEBO_MODEL_PATH
+export GAZEBO_MODEL_PATH=$HOME/work/genom_ws/gazebo_models/:$GAZEBO_MODEL_PATH
 
 ## ROS BASE
 export ROS_BASE=/opt/ros/humble
