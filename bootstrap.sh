@@ -100,6 +100,11 @@ sudo apt-get install -y kazam recordmydesktop
 cp ./config_files/config/mimeapps.list ~/.config/
 sudo update-alternatives --set x-terminal-emulator /usr/bin/terminator
 
+# ipython
+sudo apt-get install -y ipython3
+mkdir ~/.ipython/profile_default/startup/
+echo "import numpy as np" > ~/.ipython/profile_default/startup/0-numpy.py
+
 # custom home
 rm -d ~/Documents
 rm -d ~/Public
