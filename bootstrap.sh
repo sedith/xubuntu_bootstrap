@@ -53,7 +53,7 @@ rm Linux.pulsar_1.103.0_amd64.deb
 # TODO pulsar packages using submodules (how to set config?)
 
 # latex
-sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-bibtex-extra cm-super latexmk biber
+sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-bibtex-extra texlive-fonts-extra cm-super latexmk biber
 
 # ibus mocz
 sudo apt-get install -y ibus ibus-mozc
