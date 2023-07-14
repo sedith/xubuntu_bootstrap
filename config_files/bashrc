@@ -59,10 +59,6 @@ export LD_LIBRARY_PATH=/usr/local/lib
 ## LATEX
 export BIBINPUTS=.:/home/$USER/work/bib/
 
-## MATLAB
-export PATH=$PATH:/opt/matlab/bin
-alias matlabterm='matlab -nojvm -nodesktop'
-
 ## ACADOS
 export ACADOS_BASE=$HOME/work/acados
 export LD_LIBRARY_PATH=$ACADOS_BASE/lib:$LD_LIBRARY_PATH
@@ -95,6 +91,11 @@ alias genomconfig='../configure --prefix=$GENOM_DEVEL --with-templates=pocolibs/
 alias genomconfigros='../configure --prefix=$GENOM_DEVEL --with-templates=ros/client/ros,ros/client/c,ros/server CFLAGS="-Wall" CXXFLAGS="-Wall"'
 alias genomconfigmpc='../configure --prefix=$GENOM_DEVEL --with-templates=pocolibs/client/c,pocolibs/server CXXFLAGS="-O3 -Wall" CPPFLAGS="-O3 -Wall -march=native -mfpmath=sse -I$ROBOTPKG_BASE/include" LDFLAGS="-L$ROBOTPKG_BASE/lib -Wl,-R$ROBOTPKG_BASE/lib"'
 
+## MATLAB
+export PATH=$PATH:/opt/matlab/bin
+alias matlabterm='matlab -nojvm -nodesktop'
+export MATLABPATH=$ROBOTPKG_BASE/lib/matlab/:$ROBOTPKG_BASE/lib/matlab/simulink/:$ROBOTPKG_BASE/lib/matlab/simulink/genomix
+
 ## GAZEBO CLASSIC
 export GAZEBO_PLUGIN_PATH=$ROBOTPKG_BASE/lib/gazebo/:$GAZEBO_PLUGIN_PATH
 export GAZEBO_PLUGIN_PATH=$GENOM_DEVEL/lib/gazebo/:$GAZEBO_PLUGIN_PATH
@@ -118,4 +119,7 @@ alias cleanlatexshit='rm *.log *.aux *.nav *.out *.pdf *.run.xml *.snm *.toc *.s
 mkcdir () {
     mkdir -p -- "$1" &&
     cd -P -- "$1"
+}
+countfiles () {
+    ls -1q "$1" | wc -l
 }
