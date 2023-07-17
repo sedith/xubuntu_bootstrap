@@ -3,7 +3,7 @@
 # cf. http://robotpkg.openrobots.org/install.html
 
 # Prerequisites
-sudo apt-get install -y bzip2 libbz2-dev pax tar tcl-dev tk-dev flex bison libtool-bin doxygen libudev-dev libsdl2-dev
+sudo apt-get install -y bzip2 libbz2-dev pax tar tcl-dev tk-dev flex bison libtool-bin doxygen libudev-dev libsdl2-dev asciidoctor
 
 # Clone
 memory = `pwd`
