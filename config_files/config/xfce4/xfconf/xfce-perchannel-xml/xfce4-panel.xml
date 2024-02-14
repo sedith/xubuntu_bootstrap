@@ -17,11 +17,10 @@
         <value type="int" value="23"/>
         <value type="int" value="19"/>
         <value type="int" value="18"/>
-        <value type="int" value="21"/>
-        <value type="int" value="5"/>
+        <value type="int" value="27"/>
         <value type="int" value="9"/>
-        <value type="int" value="7"/>
-        <value type="int" value="8"/>
+        <value type="int" value="5"/>
+        <value type="int" value="6"/>
         <value type="int" value="10"/>
       </property>
       <property name="background-style" type="uint" value="0"/>
@@ -35,7 +34,7 @@
       <property name="position" type="string" value="p=10;x=1126;y=1473"/>
       <property name="size" type="uint" value="60"/>
       <property name="plugin-ids" type="array">
-        <value type="int" value="12"/>
+        <value type="int" value="7"/>
         <value type="int" value="13"/>
         <value type="int" value="17"/>
         <value type="int" value="20"/>
@@ -62,55 +61,18 @@
       <property name="style" type="uint" value="0"/>
       <property name="expand" type="bool" value="true"/>
     </property>
-    <property name="plugin-5" type="string" value="systray">
-      <property name="menu-is-primary" type="bool" value="true"/>
-      <property name="show-frame" type="bool" value="false"/>
-      <property name="square-icons" type="bool" value="true"/>
-      <property name="size-max" type="uint" value="22"/>
-      <property name="symbolic-icons" type="bool" value="true"/>
-      <property name="known-items" type="array">
-        <value type="string" value="vlc"/>
-        <value type="string" value="redshift"/>
-        <value type="string" value="chrome_status_icon_1"/>
-        <value type="string" value="blueman"/>
-        <value type="string" value="nm-applet"/>
-        <value type="string" value="indicator-sound-switcher"/>
-      </property>
-      <property name="known-legacy-items" type="array">
-        <value type="string" value="com.cisco.anyconnect.gui"/>
-        <value type="string" value="ibus panel"/>
-        <value type="string" value="ibus-ui-gtk3"/>
-        <value type="string" value="thunar"/>
-      </property>
-      <property name="hidden-items" type="array">
-      </property>
-    </property>
-    <property name="plugin-7" type="string" value="indicator">
-      <property name="blacklist" type="array">
-        <value type="string" value="libappmenu.so"/>
-      </property>
-      <property name="square-icons" type="bool" value="true"/>
-      <property name="known-indicators" type="array">
-        <value type="string" value="libayatana-application.so"/>
-      </property>
-    </property>
     <property name="plugin-8" type="string" value="power-manager-plugin"/>
     <property name="plugin-9" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="enable-mpris" type="bool" value="true"/>
       <property name="enable-wnck" type="bool" value="true"/>
       <property name="mixer-command" type="string" value="pavucontrol"/>
-      <property name="mpris-players" type="string" value="chromium.instance10054;chromium.instance109212;chromium.instance11766;chromium.instance12161;chromium.instance12309;chromium.instance12626;chromium.instance12969;chromium.instance13322;chromium.instance14421;chromium.instance15058;chromium.instance15219;chromium.instance16004;chromium.instance162884;chromium.instance1654;chromium.instance1662;chromium.instance1681;chromium.instance1715;chromium.instance1725;chromium.instance1728;chromium.instance1830627;chromium.instance1838659;chromium.instance1850959;chromium.instance1903;chromium.instance19063;chromium.instance1937;chromium.instance1973;chromium.instance1991;chromium.instance20135;chromium.instance2101;chromium.instance21924;chromium.instance2209;chromium.instance2240;chromium.instance2256;chromium.instance2258;chromium.instance2262;chromium.instance2272;chromium.instance2273;chromium.instance2279;chromium.instance2282;chromium.instance2286;chromium.instance2305;chromium.instance2315;chromium.instance23193;chromium.instance2321;chromium.instance2332;chromium.instance2352;chromium.instance2372;chromium.instance23724;chromium.instance2407;chromium.instance242939;chromium.instance24683;chromium.instance24768;chromium.instance247748;chromium.instance2538;chromium.instance2558139;chromium.instance2561374;chromium.instance2571658;chromium.instance2579529;chromium.instance2582026;chromium.instance260541;chromium.instance2613061;chromium.instance2626;chromium.instance26279;chromium.instance2644;chromium.instance26449;chromium.instance28610;chromium.instance29794;chromium.instance30063;chromium.instance31104;chromium.instance32436;chromium.instance334646;chromium.instance33574;chromium.instance3389960;chromium.instance3402805;chromium.instance34035;chromium.instance341942;chromium.instance3431019;chromium.instance3452966;chromium.instance348929;chromium.instance35586;chromium.instance3571510;chromium.instance3580114;chromium.instance3581081;chromium.instance3586270;chromium.instance3610437;chromium.instance3629633;chromium.instance36307;chromium.instance36943;chromium.instance37045;chromium.instance37258;chromium.instance39718;chromium.instance39839;chromium.instance40079;chromium.instance40786;chromium.instance4123;chromium.instance417600;chromium.instance426040;chromium.instance4353;chromium.instance468876;chromium.instance478616;chromium.instance5120;chromium.instance51301;chromium.instance52143;chromium.instance5294;chromium.instance53207;chromium.instance54699;chromium.instance552418;chromium.instance56619;chromium.instance574153;chromium.instance576353;chromium.instance61957;chromium.instance64491;chromium.instance6750;chromium.instance7331;chromium.instance7773;chromium.instance8064;chromium.instance86804;chromium.instance88322;chromium.instance88829;chromium.instance89490;chromium.instance89855;chromium.instance9320;chromium.instance96617;chromium.instance97703;chromium.instance9944;chromium.instance99740;parole;rhythmbox;vlc"/>
       <property name="show-notifications" type="bool" value="true"/>
     </property>
     <property name="plugin-10" type="string" value="clock">
       <property name="digital-format" type="string" value="%a %_d %b, %R"/>
       <property name="mode" type="uint" value="2"/>
-    </property>
-    <property name="plugin-12" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="16758463001.desktop"/>
-      </property>
+      <property name="timezone" type="string" value=""/>
     </property>
     <property name="plugin-13" type="string" value="launcher">
       <property name="items" type="array">
@@ -149,9 +111,32 @@
         <value type="string" value="16775005042.desktop"/>
       </property>
     </property>
-    <property name="plugin-21" type="string" value="launcher">
+    <property name="plugin-27" type="string" value="systray">
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="xfce4-power-manager"/>
+        <value type="string" value="thunar"/>
+        <value type="string" value="ibus-ui-gtk3"/>
+        <value type="string" value="ibus panel"/>
+        <value type="string" value="anydesk"/>
+      </property>
+      <property name="known-items" type="array">
+        <value type="string" value="qBittorrent"/>
+        <value type="string" value="vlc"/>
+        <value type="string" value="blueman"/>
+        <value type="string" value="nm-applet"/>
+        <value type="string" value="indicator-sound-switcher"/>
+        <value type="string" value="redshift"/>
+      </property>
+    </property>
+    <property name="plugin-5" type="string" value="indicator">
+      <property name="known-indicators" type="array">
+        <value type="string" value="libayatana-application.so"/>
+      </property>
+    </property>
+    <property name="plugin-6" type="string" value="power-manager-plugin"/>
+    <property name="plugin-7" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="16781099171.desktop"/>
+        <value type="string" value="17072421801.desktop"/>
       </property>
     </property>
   </property>
