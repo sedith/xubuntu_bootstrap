@@ -50,15 +50,13 @@ export PS2='> '
 
 ## PATH
 export PATH=.:$PATH  # current folder first
-export PATH=$PATH:/home/$USER/.local/bin  # local python bin
+export PATH=$PATH:$HOME/.local/bin  # local python bin
 
 ## ALIASES & COMMANDS
 alias please='sudo'
 alias isthere='ps -e | grep'
 alias py='python3'
-alias ipy='ipython3'
 alias editbash='$EDITOR ~/.bashrc'
-alias githubconfig='git config user.name Sedith && git config user.email martin.jacquet@posteo.net'
 mkcdir () {
     mkdir -p -- "$1" &&
     cd -P -- "$1"
