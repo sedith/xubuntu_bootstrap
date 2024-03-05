@@ -24,6 +24,11 @@ cp -r ./config_files/config/xfce4/xfconf/xfce-perchannel-xml/ ~/.config/xfce4/xf
 sudo apt-get install -y thunderbird
 # TODO export config and import it
 
+## firefox
+sudo snap install firefox
+echo 'open firefox and sync account before running next line'
+cp ./config_files/firefox/search.json.mozlz4 ~/snap/firefox/common/.mozilla/firefox/*.default*/search.*
+
 ## redshift
 sudo apt-get install -y redshift redshift-gtk
 cp ./config_files/config/redshift.conf ~/.config/
