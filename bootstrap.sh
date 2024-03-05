@@ -71,7 +71,7 @@ sudo apt remove -y xserver-xorg-input-synaptics*
 ## signal desktop
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
 cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
-echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' | sudo tee /etc/apt/sources.list.d/signal-xenial.list
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt `lsb_release -c | cut -d $'\t' -f2` main" | sudo tee /etc/apt/sources.list.d/signal-`lsb_release -c | cut -d $'\t' -f2`.list
 sudo apt update
 sudo apt install -y signal-desktop
 
