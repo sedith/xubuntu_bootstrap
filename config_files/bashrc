@@ -96,15 +96,20 @@ export PATH=$PATH:/opt/matlab/bin
 alias matlabterm='matlab -nojvm -nodesktop'
 export MATLABPATH=$ROBOTPKG_BASE/lib/matlab/:$ROBOTPKG_BASE/lib/matlab/simulink/:$ROBOTPKG_BASE/lib/matlab/simulink/genomix
 
-## GAZEBO CLASSIC
-export GAZEBO_PLUGIN_PATH=$ROBOTPKG_BASE/lib/gazebo/:$GAZEBO_PLUGIN_PATH
-export GAZEBO_PLUGIN_PATH=$GENOM_DEVEL/lib/gazebo/:$GAZEBO_PLUGIN_PATH
-export GAZEBO_MODEL_PATH=$HOME/work/genom_ws/gazebo_models/:$GAZEBO_MODEL_PATH
+# ## GAZEBO CLASSIC
+# export GAZEBO_PLUGIN_PATH=$ROBOTPKG_BASE/lib/gazebo/:$GAZEBO_PLUGIN_PATH
+# export GAZEBO_PLUGIN_PATH=$GENOM_DEVEL/lib/gazebo/:$GAZEBO_PLUGIN_PATH
+# export GAZEBO_MODEL_PATH=$HOME/work/genom_ws/gazebo_models/:$GAZEBO_MODEL_PATH
 
 ## ROS BASE
-export ROS_BASE=/opt/ros/humble
+export ROS_IP=localhost
+export ROS_HOSTNAME=localhost
+export PYTHONPATH=/usr/lib/x86_64-linux-gnu/python:$PYTHONPATH
+export ROS_BASE=/home/sedith/work/ros_ws/noetic_base/devel/
 alias rossource="source $ROS_BASE/setup.bash"
 alias rosdevel="source ./devel/setup.bash --extend"
+alias rviz="rosrun rviz rviz"
+rossource
 
 ## ALIASES & COMMANDS
 alias please='sudo'
@@ -113,6 +118,8 @@ alias isthere='ps -e | grep'
 alias py='python3'
 alias ipy='ipython3'
 alias editbash='$EDITOR ~/.bashrc'
+alias githubconfig='git config user.name sedith && git config user.email martin.jacquet@posteo.net'
+# alias black='black -S -l 150'
 alias pandocjaponais='pandoc --pdf-engine=xelatex *.md -o 00_main.pdf'
 alias cleanlatexshit='rm *.log *.aux *.nav *.out *.pdf *.run.xml *.snm *.toc *.synctex.gz *-blx.bib *.bbl *.blg'
 mkcdir () {
